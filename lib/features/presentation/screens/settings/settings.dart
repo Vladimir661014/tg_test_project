@@ -12,14 +12,13 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsScreenState extends State<SettingsScreen> {
   @override
   void initState() {
-    Modular.to.navigate(
-        ar.buildRoute('home')('settings')('profile')('edit_profile')());
+    Modular.to.navigate(ar.routeLocation(ar.editProfile));
     super.initState();
   }
 
   @override
   void dispose() {
-    Modular.to.navigate(ar.buildRoute('home')('chat')('0')());
+    Modular.to.navigate(ar.routeLocation(ar.editProfile, {ar.chatId: 0}));
     super.dispose();
   }
 

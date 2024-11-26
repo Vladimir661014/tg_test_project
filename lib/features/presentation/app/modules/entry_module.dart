@@ -8,6 +8,6 @@ class EntryModule extends Module {
 
   @override
   void routes(r) {
-    r.module(ar.buildRoute('/')(), module: MainModule());
+    r.module(ar.routeLocation(ar.root), module: MainModule());
   }
 }

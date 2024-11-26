@@ -14,8 +14,7 @@ class EditProfile extends StatelessWidget {
         const Text('EditProfile'),
         TextButton(
             onPressed: () {
-              Modular.to.navigate(
-                  ar.buildRoute('home')('settings')('profile')('edit_name')());
+              Modular.to.navigate(ar.routeLocation(ar.editName));
             },
             child: const Text('next'))
       ],

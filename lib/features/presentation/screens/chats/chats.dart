@@ -15,8 +15,9 @@ class ChatsScreen extends StatelessWidget {
               var chatId = ++index;
               return ListTile(
                 title: Text('Item $chatId'),
-                onTap: (){
-                  Modular.to.navigate(ar.buildRoute('home')('chat')('$chatId')());
+                onTap: () {
+                  Modular.to
+                      .navigate(ar.routeLocation(ar.chat, {ar.chatId: chatId}));
                 },
               );
             }));

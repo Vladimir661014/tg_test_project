@@ -7,8 +7,7 @@ class EntryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Modular.setInitialRoute(
-        '${ar.buildRoute('home')()}${ar.buildRoute('chat')()}/0');
+    Modular.setInitialRoute(ar.routeLocation(ar.chat, {ar.chatId: 0}));
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: Modular.routerConfig,

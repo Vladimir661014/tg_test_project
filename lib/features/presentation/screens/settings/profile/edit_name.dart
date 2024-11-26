@@ -15,8 +15,7 @@ class EditName extends StatelessWidget {
         Center(
           child: TextButton(
               onPressed: () {
-                Modular.to.navigate(ar.buildRoute('home')('settings')(
-                    'profile')('edit_profile')());
+                Modular.to.navigate(ar.routeLocation(ar.editProfile));
               },
               child: const Text('back')),
         ),
