@@ -1,9 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:window_size/window_size.dart';
-import 'features/presentation/app/modules/entry_module.dart';
-import '../features/presentation/app/entry_widget.dart';
+import 'app/widgets/entry_widget.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,14 +14,3 @@ void main() {
   runApp(const ModularEntryWidget());
 }
 
-class ModularEntryWidget extends StatelessWidget {
-  const ModularEntryWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ModularApp(
-      module: EntryModule(),
-      child: const EntryWidget(),
-    );
-  }
-}
